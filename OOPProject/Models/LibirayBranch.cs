@@ -66,6 +66,15 @@ namespace OOPProject.Models
 			}
 			throw new InvalidOperationException("Member not found");
 		}
+		public BookCopy FindCopy(string copyId)
+		{
+			for (int i = 0; i < _copies.Count; i++)
+			{
+				if (_copies[i].CopyId == copyId.NoramlizeId())
+					return _copies[i];
+			}
+			throw new InvalidOperationException("BookCopy not found");
+		}
 
 
 		public void AddBookCopy(BookCopy book)

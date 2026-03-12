@@ -11,8 +11,4 @@
     <ProjectReference Include="..\ConsoleThemes\ConsoleThemes.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
-
 </Project>

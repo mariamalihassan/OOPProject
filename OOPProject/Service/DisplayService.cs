@@ -47,6 +47,24 @@ namespace OOPProject.Service
 			}
 
 		}
+		public void ShowALLCopies(LibirayBranch branch)
+		{
+			ThemeHelper.PrintHeader("ALL Book Copies");
+			
+			if (branch.BookCopies.Count == 0)
+			{
+				ThemeHelper.PrintWarning("No  book copies found");
+				return;
+			}
+			else
+			{
+				for (int i = 0; i < branch.BookCopies.Count; i++)
+				{
+					Console.WriteLine(branch.BookCopies[i].ToDisplay());
+				}
+			}
+
+		}
 
 		public void ShowMemberHistory(Member member)
 		{
